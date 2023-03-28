@@ -1,0 +1,6 @@
+Ignores email addresses
+.
+username@example.com
+.
+<p><a href="mailto:username@example.com">username@example.com</a></p>
+.

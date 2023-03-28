@@ -1,0 +1,62 @@
+{
+  "name": "markdown-it-social-mention",
+  "version": "0.0.1",
+  "description": "Parse links to users on social networks using markdown-it.",
+  "keywords": [
+    "markdown-it-plugin",
+    "markdown-it",
+    "markdown",
+    "mentions"
+  ],
+  "homepage": "https://github.com/paulrobertlloyd/markdown-it-social-mention#readme",
+  "bugs": {
+    "url": "https://github.com/paulrobertlloyd/markdown-it-social-mention/issues"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Paul Robert Lloyd",
+      "url": "https://paulrobertlloyd.com"
+    }
+  ],
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulrobertlloyd/markdown-it-social-mention.git"
+  },
+  "scripts": {
+    "lint": "xo",
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "coverage": "c8 mocha"
+  },
+  "devDependencies": {
+    "c8": "^7.11.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-testgen": "^0.1.6",
+    "mocha": "^10.0.0",
+    "xo": "^0.53.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcovonly"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "envs": "node",
+    "rules": {
+      "unicorn/prefer-module": 0
+    }
+  }
+}

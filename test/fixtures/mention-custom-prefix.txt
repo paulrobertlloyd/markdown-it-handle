@@ -1,0 +1,46 @@
+Flickr mention (`/photos` prefix)
+.
+@username@flickr.com
+.
+<p><a href="https://flickr.com/photos/username" rel="external">@username</a></p>
+.
+
+
+Instagram mention (no prefix)
+.
+@username@instagram.com
+.
+<p><a href="https://instagram.com/username" rel="external">@username</a></p>
+.
+
+
+Micro.blog (no prefix)
+.
+@username@micro.blog
+.
+<p><a href="https://micro.blog/username" rel="external">@username</a></p>
+.
+
+
+Twitter mention (no prefix)
+.
+@username@twitter.com
+.
+<p><a href="https://twitter.com/username" rel="external">@username</a></p>
+.
+
+
+Vimeo mention (no prefix)
+.
+@username@vimeo.com
+.
+<p><a href="https://vimeo.com/username" rel="external">@username</a></p>
+.
+
+
+YouTube mention (no prefix)
+.
+@username@youtube.com
+.
+<p><a href="https://youtube.com/username" rel="external">@username</a></p>
+.

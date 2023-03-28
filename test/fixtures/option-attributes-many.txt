@@ -1,0 +1,6 @@
+Simple mention with many link attributes
+.
+@username@social.example
+.
+<p><a href="https://social.example/@username" class="mention" rel="external nofollow" target="_blank">@username</a></p>
+.
