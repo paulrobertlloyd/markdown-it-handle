@@ -1,0 +1,54 @@
+Flickr handle (`photos/` prefix)
+.
+@username@flickr.com
+.
+<p><a href="https://flickr.com/photos/username" rel="external">@username</a></p>
+.
+
+
+Instagram handle (no prefix)
+.
+@username@instagram.com
+.
+<p><a href="https://instagram.com/username" rel="external">@username</a></p>
+.
+
+
+LinkedIn handle (`in/` prefix)
+.
+@username@linkedin.com
+.
+<p><a href="https://linkedin.com/in/username" rel="external">@username</a></p>
+.
+
+
+Micro.blog handle (no prefix)
+.
+@username@micro.blog
+.
+<p><a href="https://micro.blog/username" rel="external">@username</a></p>
+.
+
+
+Twitter handle (no prefix)
+.
+@username@twitter.com
+.
+<p><a href="https://twitter.com/username" rel="external">@username</a></p>
+.
+
+
+Vimeo handle (no prefix)
+.
+@username@vimeo.com
+.
+<p><a href="https://vimeo.com/username" rel="external">@username</a></p>
+.
+
+
+YouTube handle (no prefix)
+.
+@username@youtube.com
+.
+<p><a href="https://youtube.com/username" rel="external">@username</a></p>
+.

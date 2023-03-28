@@ -1,0 +1,6 @@
+Simple handle with many link attributes
+.
+@username@social.example
+.
+<p><a href="https://social.example/@username" class="handle" rel="external nofollow" target="_blank">@username</a></p>
+.

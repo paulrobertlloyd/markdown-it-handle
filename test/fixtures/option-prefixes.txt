@@ -1,0 +1,6 @@
+Simple handle with default prefix overridden
+.
+@username@flickr.com
+.
+<p><a href="https://flickr.com/people/username" rel="external">@username</a></p>
+.

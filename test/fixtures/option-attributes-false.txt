@@ -1,0 +1,6 @@
+Simple handle with no link attributes
+.
+@username@social.example
+.
+<p><a href="https://social.example/@username">@username</a></p>
+.

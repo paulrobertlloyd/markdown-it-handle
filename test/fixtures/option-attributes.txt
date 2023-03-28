@@ -1,0 +1,6 @@
+Simple handle with `nofollow` attribute
+.
+@username@social.example
+.
+<p><a href="https://social.example/@username" rel="nofollow">@username</a></p>
+.

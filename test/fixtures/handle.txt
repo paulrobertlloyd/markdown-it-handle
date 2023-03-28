@@ -1,0 +1,86 @@
+Simple handle
+.
+@username@social.example
+.
+<p><a href="https://social.example/@username" rel="external">@username</a></p>
+.
+
+
+Ignores trailing full stop
+.
+Follow @username@social.example.
+.
+<p>Follow <a href="https://social.example/@username" rel="external">@username</a>.</p>
+.
+
+
+Multiple handles
+.
+Hello @foo@social.example and @bar@social.example.
+.
+<p>Hello <a href="https://social.example/@foo" rel="external">@foo</a> and <a href="https://social.example/@bar" rel="external">@bar</a>.</p>
+.
+
+
+Ignores handle inside link
+.
+[@username@social.example](#)
+.
+<p><a href="#">@username@social.example</a></p>
+.
+
+
+Ignores images
+.
+![@username@social.example](#)
+.
+<p><img src="#" alt="@username@social.example"></p>
+.
+
+
+Ignores linked email addresses
+.
+<username@social.example>
+.
+<p><a href="mailto:username@social.example">username@social.example</a></p>
+.
+
+
+Ignores bare text
+.
+@media
+.
+<p>@media</p>
+.
+
+
+Ignores links without handles (with text before and after link)
+.
+This is a [link](#).
+.
+<p>This is a <a href="#">link</a>.</p>
+.
+
+
+Ignores links without handles (with text before link)
+.
+This is a [link](#)
+.
+<p>This is a <a href="#">link</a></p>
+.
+
+
+Ignores links without handles (with text after link)
+.
+[Link](#).
+.
+<p><a href="#">Link</a>.</p>
+.
+
+
+Ignores links without handles in paragraph with
+.
+This is a [link](#) and this is a @user@host.com.
+.
+<p>This is a <a href="#">link</a> and this is a <a href="https://host.com/@user" rel="external">@user</a>.</p>
+.
