@@ -45,7 +45,7 @@ This can be particularly useful if you are syndicating plain-text posts using Ma
 By default, links include a `rel="external"` attribute. To override this behaviour, set the `attributes` option to `false`:
 
 ```js
-md.use(require('markdown-it-govuk'), {
+md.use(require('markdown-it-social-mention'), {
   attributes: false
 })
 
@@ -61,7 +61,7 @@ This will output:
 To add or update attributes used on mention links, provide them in the `attributes` option:
 
 ```js
-md.use(require('markdown-it-govuk'), {
+md.use(require('markdown-it-social-mention'), {
   attributes: {
     class: 'mention',
     rel: 'external nofollow',
@@ -93,7 +93,7 @@ By default, usernames are linked to URLs using first format using the `@` symbol
 For example, if you want a Flickr usernames to link to profile pages instead of photo pages, you can update the `prefixes` option as follows:
 
 ```js
-md.use(require('markdown-it-govuk'), {
+md.use(require('markdown-it-social-mention'), {
   prefixes: {
     'flickr.com': 'people/',
   }
