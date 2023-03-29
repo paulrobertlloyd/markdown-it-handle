@@ -10,7 +10,7 @@ Node.js v16 or later.
 
 > **Warning** Work in progress. Package can be installed directly from this repository.
 
-`npm install paulrobertlloyd/markdown-it-social-mention --save`
+`npm install paulrobertlloyd/markdown-it-social-mention`
 
 ## Usage
 
