@@ -1,5 +1,5 @@
-const replace = require('./lib/replace.js');
-const prefixes = require('./lib/prefixes.js');
+import { replace } from './lib/replace.js';
+import { prefixes } from './lib/prefixes.js';
 
 /**
  * Parse links to users on social networks using markdown-it
@@ -7,7 +7,7 @@ const prefixes = require('./lib/prefixes.js');
  * @param {object} md - markdown-it instance
  * @param {object} [pluginOptions={}] - Plugin options
  */
-module.exports = function (md, pluginOptions = {}) {
+export default function (md, pluginOptions = {}) {
   // Default plugin options
   const defaults = {
     attributes: {

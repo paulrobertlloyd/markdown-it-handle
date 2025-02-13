@@ -1,20 +1,25 @@
-const {describe} = require('mocha');
-const testGenerator = require('markdown-it-testgen');
+import {describe} from 'mocha';
+import markdownit from 'markdown-it'
+import testGenerator from 'markdown-it-testgen';
+import handle from '../index.js'
 
 describe('Converts handles to links', () => {
-  const md = require('markdown-it')().use(require('../index.js'));
+  const md = markdownit()
+  md.use(handle);
 
   testGenerator('./test/fixtures/handle.txt', md);
 });
 
 describe('Converts handles to links using specified prefix', () => {
-  const md = require('markdown-it')().use(require('../index.js'));
+  const md = markdownit()
+  md.use(handle);
 
   testGenerator('./test/fixtures/handle-custom-prefix.txt', md);
 });
 
 describe('Converts handles to links with optional attributes', () => {
-  const md = require('markdown-it')().use(require('../index.js'), {
+  const md = markdownit()
+  md.use(handle, {
     attributes: {
       rel: 'nofollow',
     },
@@ -24,7 +29,8 @@ describe('Converts handles to links with optional attributes', () => {
 });
 
 describe('Converts handles to links with no additional attributes', () => {
-  const md = require('markdown-it')().use(require('../index.js'), {
+  const md = markdownit()
+  md.use(handle, {
     attributes: false,
   });
 
@@ -32,7 +38,8 @@ describe('Converts handles to links with no additional attributes', () => {
 });
 
 describe('Converts handles to links with many additional attributes', () => {
-  const md = require('markdown-it')().use(require('../index.js'), {
+  const md = markdownit()
+  md.use(handle, {
     attributes: {
       class: 'handle',
       rel: 'external nofollow',
@@ -44,7 +51,8 @@ describe('Converts handles to links with many additional attributes', () => {
 });
 
 describe('Converts handles to links using prefixes option', () => {
-  const md = require('markdown-it')().use(require('../index.js'), {
+  const md = markdownit()
+  md.use(handle, {
     prefixes: {
       'flickr.com': 'people/',
     },
@@ -54,9 +62,10 @@ describe('Converts handles to links using prefixes option', () => {
 });
 
 describe('Converts handles to links with linkify enabled', () => {
-  const md = require('markdown-it')({
+  const md = markdownit({
     linkify: true,
-  }).use(require('../index.js'));
+  })
+  md.use(handle);
 
   testGenerator('./test/fixtures/handle-linkify.txt', md);
 });

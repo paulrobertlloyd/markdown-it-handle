@@ -13,9 +13,12 @@ Node.js v22 or later.
 ## Usage
 
 ```js
-const md = require('markdown-it')
+import markdownit from 'markdown-it'
+import handle from 'markdown-it-handle'
 
-md.use(require('markdown-it-handle'))
+const md = markdownit()
+
+md.use(handle)
 ```
 
 This plugin converts the format used for username handles common to federated social networks, into linked usernames.
@@ -47,7 +50,7 @@ Syndicated text containing handles will get parsed as mentions by the federated 
 By default, links include a `rel="external"` attribute. To override this behaviour, set the `attributes` option to `false`:
 
 ```js
-md.use(require('markdown-it-handle'), {
+md.use(handle, {
   attributes: false
 })
 
@@ -63,7 +66,7 @@ This will output:
 You can add or update attributes used on handle links by providing them in the `attributes` option:
 
 ```js
-md.use(require('markdown-it-handle'), {
+md.use(handle, {
   attributes: {
     class: 'handle',
     rel: 'external nofollow',
@@ -95,7 +98,7 @@ By default, usernames are linked to URLs using first format using the `@` symbol
 For example, if you want a Flickr usernames to link to profile pages instead of photo pages, you can update the `prefixes` option as follows:
 
 ```js
-md.use(require('markdown-it-handle'), {
+md.use(handle, {
   prefixes: {
     'flickr.com': 'people/',
   }
