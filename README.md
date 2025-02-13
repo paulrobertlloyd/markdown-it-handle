@@ -4,7 +4,7 @@ Links to users across different social networks using [`markdown-it`](https://gi
 
 ## Requirements
 
-Node.js v16 or later.
+Node.js v22 or later.
 
 ## Installation
 
