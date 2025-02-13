@@ -30,6 +30,14 @@ Ignores handle inside link
 .
 
 
+Ignores other links inside content
+.
+[Link](https://example.com). @username@social.example!
+.
+<p><a href="https://example.com">Link</a>. <a href="https://social.example/@username" rel="external">@username</a>!</p>
+.
+
+
 Ignores images
 .
 ![@username@social.example](#)
