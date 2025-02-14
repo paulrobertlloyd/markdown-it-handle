@@ -44,9 +44,9 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-unicorn": "^56.0.0",
     "globals": "^15.15.0",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^14.0.0",
     "markdown-it-testgen": "^0.1.6",
-    "np": "*",
+    "np": "^10.0.0",
     "prettier": "^3.0.1"
   },
   "engines": {
