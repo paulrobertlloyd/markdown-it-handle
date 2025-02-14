@@ -21,6 +21,7 @@
     "lib",
     "index.js"
   ],
+  "exports": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/paulrobertlloyd/markdown-it-handle.git"
