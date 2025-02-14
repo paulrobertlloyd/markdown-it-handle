@@ -26,17 +26,28 @@
     "url": "https://github.com/paulrobertlloyd/markdown-it-handle.git"
   },
   "scripts": {
-    "lint": "xo",
+    "lint:format": "prettier . --check",
+    "lint:format:fix": "prettier . --write",
+    "lint:syntax": "eslint '**/*.js'",
+    "lint:syntax:fix": "eslint '**/*.js' --fix",
+    "lint": "npm run lint:format && npm run lint:syntax",
+    "lint:fix": "npm run lint:format:fix && npm run lint:syntax:fix",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage",
     "test:watch": "node --test --watch",
     "release": "np"
   },
   "devDependencies": {
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-jsdoc": "^50.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "globals": "^15.15.0",
     "markdown-it": "^13.0.1",
     "markdown-it-testgen": "^0.1.6",
     "np": "*",
-    "xo": "^0.54.0"
+    "prettier": "^3.0.1"
   },
   "engines": {
     "node": "^22.0.0"
@@ -44,9 +55,5 @@
   "type": "module",
   "publishConfig": {
     "access": "public"
-  },
-  "xo": {
-    "space": true,
-    "envs": "node"
   }
 }
