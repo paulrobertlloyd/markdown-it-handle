@@ -13,12 +13,12 @@ Node.js v22 or later.
 ## Usage
 
 ```js
-import markdownit from 'markdown-it'
-import handle from 'markdown-it-handle'
+import markdownit from "markdown-it";
+import handle from "markdown-it-handle";
 
-const md = markdownit()
+const md = markdownit();
 
-md.use(handle)
+md.use(handle);
 ```
 
 This plugin converts the format used for username handles common to federated social networks, into linked usernames.
@@ -51,10 +51,10 @@ By default, links include a `rel="external"` attribute. To override this behavio
 
 ```js
 md.use(handle, {
-  attributes: false
-})
+  attributes: false,
+});
 
-marked('@username@social.example')
+marked("@username@social.example");
 ```
 
 This will output:
@@ -68,13 +68,13 @@ You can add or update attributes used on handle links by providing them in the `
 ```js
 md.use(handle, {
   attributes: {
-    class: 'handle',
-    rel: 'external nofollow',
-    target: '_blank',
-  }
-})
+    class: "handle",
+    rel: "external nofollow",
+    target: "_blank",
+  },
+});
 
-marked('@username@social.example')
+marked("@username@social.example");
 ```
 
 This will output:
@@ -87,11 +87,11 @@ This will output:
 
 Most federated networks include the `@` symbol in profile URLs but older and non-federated networks do not. Meanwhile, some networks use a common path for user profiles. For example:
 
-| Network | Username URL format |
-| - | - |
-| Mastodon | <https://server/@username> |
-| Twitter | <https://twitter.com/username> |
-| Flickr | <https://flickr.com/photos/username> |
+| Network  | Username URL format                  |
+| -------- | ------------------------------------ |
+| Mastodon | <https://server/@username>           |
+| Twitter  | <https://twitter.com/username>       |
+| Flickr   | <https://flickr.com/photos/username> |
 
 By default, usernames are linked to URLs using first format using the `@` symbol. A list of common social networks that don’t use this format is provided in [/lib/prefixes.js](/lib/prefixes.js). These values can be overridden and extended.
 
@@ -100,11 +100,11 @@ For example, if you want a Flickr usernames to link to profile pages instead of 
 ```js
 md.use(handle, {
   prefixes: {
-    'flickr.com': 'people/',
-  }
-})
+    "flickr.com": "people/",
+  },
+});
 
-marked('@username@flickr.com')
+marked("@username@flickr.com");
 ```
 
 This will output:
