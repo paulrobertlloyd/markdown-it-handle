@@ -1,75 +1,75 @@
-import test from 'node:test';
-import markdownit from 'markdown-it'
-import testGenerator from 'markdown-it-testgen';
-import handle from '../index.js'
+import test from "node:test";
+import markdownit from "markdown-it";
+import testGenerator from "markdown-it-testgen";
+import handle from "../index.js";
 
 // markdown-it-testgen expects Mocha to have set the following globals
-global.describe = test.describe
-global.it = test.it
+globalThis.describe = test.describe;
+globalThis.it = test.it;
 
-describe('Converts handles to links', () => {
-  const md = markdownit()
+describe("Converts handles to links", () => {
+  const md = markdownit();
   md.use(handle);
 
-  testGenerator('./test/fixtures/handle.txt', md);
+  testGenerator("./test/fixtures/handle.txt", md);
 });
 
-describe('Converts handles to links using specified prefix', () => {
-  const md = markdownit()
+describe("Converts handles to links using specified prefix", () => {
+  const md = markdownit();
   md.use(handle);
 
-  testGenerator('./test/fixtures/handle-custom-prefix.txt', md);
+  testGenerator("./test/fixtures/handle-custom-prefix.txt", md);
 });
 
-describe('Converts handles to links with optional attributes', () => {
-  const md = markdownit()
+describe("Converts handles to links with optional attributes", () => {
+  const md = markdownit();
   md.use(handle, {
     attributes: {
-      rel: 'nofollow',
+      rel: "nofollow",
     },
   });
 
-  testGenerator('./test/fixtures/option-attributes.txt', md);
+  testGenerator("./test/fixtures/option-attributes.txt", md);
 });
 
-describe('Converts handles to links with no additional attributes', () => {
-  const md = markdownit()
+describe("Converts handles to links with no additional attributes", () => {
+  const md = markdownit();
   md.use(handle, {
     attributes: false,
   });
 
-  testGenerator('./test/fixtures/option-attributes-false.txt', md);
+  testGenerator("./test/fixtures/option-attributes-false.txt", md);
 });
 
-describe('Converts handles to links with many additional attributes', () => {
-  const md = markdownit()
+describe("Converts handles to links with many additional attributes", () => {
+  const md = markdownit();
   md.use(handle, {
     attributes: {
-      class: 'handle',
-      rel: 'external nofollow',
-      target: '_blank',
+      class: "handle",
+      rel: "external nofollow",
+      target: "_blank",
     },
   });
 
-  testGenerator('./test/fixtures/option-attributes-many.txt', md);
+  testGenerator("./test/fixtures/option-attributes-many.txt", md);
 });
 
-describe('Converts handles to links using prefixes option', () => {
-  const md = markdownit()
+describe("Converts handles to links using prefixes option", () => {
+  const md = markdownit();
   md.use(handle, {
     prefixes: {
-      'flickr.com': 'people/',
+      "flickr.com": "people/",
     },
   });
 
-  testGenerator('./test/fixtures/option-prefixes.txt', md);
+  testGenerator("./test/fixtures/option-prefixes.txt", md);
 });
 
-describe('Converts handles to links with linkify enabled', () => {
+describe("Converts handles to links with linkify enabled", () => {
   const md = markdownit({
     linkify: true,
-  })
+  });
   md.use(handle);
 
-  testGenerator('./test/fixtures/handle-linkify.txt', md);
+  testGenerator("./test/fixtures/handle-linkify.txt", md);
 });
