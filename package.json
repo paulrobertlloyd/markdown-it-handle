@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-handle",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parse links to users on social networks using markdown-it.",
   "keywords": [
     "markdown-it-plugin",
