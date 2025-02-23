@@ -46,6 +46,14 @@ Micro.blog handle (no prefix)
 .
 
 
+Reddit handle (`u/` prefix)
+.
+@username@reddit.com
+.
+<p><a href="https://reddit.com/user/username" rel="external">@username</a></p>
+.
+
+
 Vimeo handle (no prefix)
 .
 @username@vimeo.com
