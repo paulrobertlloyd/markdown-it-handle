@@ -113,7 +113,9 @@ Most federated networks include the `@` symbol in profile URLs but older and non
 | LinkedIn  | <https://linkedin.com/in/username>   |
 | Flickr    | <https://flickr.com/photos/username> |
 
-By default, usernames are linked to URLs using first format using the `@` symbol. A list of common social networks that don’t use this format is provided in [/lib/prefixes.js](/lib/prefixes.js). These values can be overridden and extended.
+By default, usernames are linked to URLs using the first format which includes the `@` symbol.
+
+A list of common social networks that don’t use this format is provided in [/lib/prefixes.js](/lib/prefixes.js). These values can be overridden and extended.
 
 For example, if you want a Flickr usernames to link to profile pages instead of photo pages, you can update the `prefixes` option as follows:
 
