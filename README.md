@@ -30,17 +30,13 @@ This plugin converts the format used for username handles common to federated so
 For example, given this Markdown:
 
 ```md
-@paulrobertlloyd@micro.blog, @paulrobertlloyd@twitter.com and @paulrobertlloyd@mastadon.social.
+@paulrobertlloyd@micro.blog and @paulrobertlloyd@mastadon.social.
 ```
 
-the following markup will be generated (lines wrapped for clarity):
+the following markup will be generated:
 
 ```html
-<p>
-  <a href="https://micro.blog/paulrobertlloyd" rel="external">@paulrobertlloyd</a>,
-  <a href="https://twitter.com/paulrobertlloyd" rel="external">@paulrobertlloyd</a> and
-  <a href="https://mastodon.social/@paulrobertlloyd" rel="external">@paulrobertlloyd</a>.
-</p>
+<p><a href="https://micro.blog/paulrobertlloyd" rel="external">@paulrobertlloyd</a>, and <a href="https://mastodon.social/@paulrobertlloyd" rel="external">@paulrobertlloyd</a>.</p>
 ```
 
 This can be particularly useful if you are syndicating plain-text posts using Markdown, but rendering them on your own site as HTML.
@@ -111,11 +107,11 @@ This will output:
 
 Most federated networks include the `@` symbol in profile URLs but older and non-federated networks do not. Meanwhile, some networks use a common path for user profiles. For example:
 
-| Network  | Username URL format                  |
-| -------- | ------------------------------------ |
-| Mastodon | <https://server/@username>           |
-| Twitter  | <https://twitter.com/username>       |
-| Flickr   | <https://flickr.com/photos/username> |
+| Network   | Username URL format                  |
+| --------- | ------------------------------------ |
+| Mastodon  | <https://server/@username>           |
+| LinkedIn  | <https://linkedin.com/in/username>   |
+| Flickr    | <https://flickr.com/photos/username> |
 
 By default, usernames are linked to URLs using first format using the `@` symbol. A list of common social networks that don’t use this format is provided in [/lib/prefixes.js](/lib/prefixes.js). These values can be overridden and extended.
 

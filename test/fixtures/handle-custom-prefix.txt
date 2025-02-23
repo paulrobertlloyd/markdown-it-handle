@@ -46,14 +46,6 @@ Micro.blog handle (no prefix)
 .
 
 
-Twitter handle (no prefix)
-.
-@username@twitter.com
-.
-<p><a href="https://twitter.com/username" rel="external">@username</a></p>
-.
-
-
 Vimeo handle (no prefix)
 .
 @username@vimeo.com
