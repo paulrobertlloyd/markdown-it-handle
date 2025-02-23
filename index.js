@@ -14,6 +14,9 @@ export default function (md, pluginOptions = {}) {
       rel: "external",
     },
     prefixes,
+    atProto: {
+      app: "bsky.app",
+    },
   };
 
   // Merge options

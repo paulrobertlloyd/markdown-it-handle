@@ -1,3 +1,19 @@
+Bluesky handle (`profile/username.bsky.social` prefix)
+.
+@username.bsky.social
+.
+<p><a href="https://bsky.app/profile/username.bsky.social" rel="external">@username.bsky.social</a></p>
+.
+
+
+Bluesky custom domain handle (`profile/example.website` prefix)
+.
+@example.website
+.
+<p><a href="https://bsky.app/profile/example.website" rel="external">@example.website</a></p>
+.
+
+
 Flickr handle (`photos/` prefix)
 .
 @username@flickr.com
